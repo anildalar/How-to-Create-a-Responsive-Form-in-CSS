@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>How to create a Responisive Form in CSS</title>
+        <style>
+            body{ /* Element Selector */
+                background-color: #F2F2F2;
+                margin: 0px;
+            }
+
+            .myform{ /* class selector */
+                width: 60%;
+                height: 600px;
+                margin: 70px auto;
+            }
+
+            .myform input,.myform select{
+                height: 50px;
+                border:1px solid #E5E5E5;
+                border-radius: 3px;;
+            }
+
+            .col-25{
+                width: 25%;
+                float: left;
+            }
+            .col-75{
+                width: 74%;
+                float: left
+            }
+            .a_tbdr{
+                border:1px dashed #000;
+            }
+            .w-100{
+                width: 100%;
+            }
+            .row{
+                min-height: 50px;
+                margin-bottom: 10px;
+            }
+            @media only screen and (max-width:992px) {
+                .col-25,.col-75{ /* , Combinational Selector */
+                    width: 100%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <form class="myform">
+            <div class="row">
+                <div class="col-25">
+                    <label for="fname">First Name</label>
+                </div>
+                <div class="col-75">
+                    <input id="fname" type="text" name="firstname" class="w-100">
+                </div>
+            </div>
+            <div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="lname">Last Name</label>
+                </div>
+                <div class="col-75">
+                    <input id="lname" type="text" name="lastname" class="w-100" >
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="country">Country</label>
+                </div>
+                <div class="col-75">
+                    <select id="country" name="country" class="w-100" >
+                        <option value="australia">Australia</option>
+                        <option value="canada">Canada</option>
+                        <option value="usa">USA</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="subject">Subject</label>
+                </div>
+                <div class="col-75">
+                   <textarea style="border:none;border-radius: 4px;border:1px solid #E5E5E5;" id="subject" name="subject" placeholder="Write Something" class="w-100" rows="10"></textarea>
+                </div>
+            </div>
+            <input type="submit" name="submit" value="Submit" style="float: right;background-color: #45A049;color:#fff">
+        </form>
+
+    </body>
+</html>
